@@ -10,14 +10,14 @@ const server = http.createServer(app); //variable of our express server that wil
 const io = new Server(server, {
 	cors: {
 		// determining cors the will be accepted to avoid cors issues
-		origin: 'http://localhost:3000', //telling our socket io server which server (react url) will call it
+		origin: 'http://localhost:3002', //telling our socket io server which server (react url) will call it
 		methods: ['GET', 'POST'],
 	},
 });
 
 io.on('connection', (socket) => {
 	// telling socket io that we're listening event with this id (connection)
-	console.log(socket.id);
+	console.log(`User connected: ${socket.id}`);
 
 	socket.on('disconnect', () => {
 		console.log('User disconnected', socket.id);
