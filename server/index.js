@@ -19,6 +19,11 @@ io.on('connection', (socket) => {
 	// telling socket io that we're listening event with this id (connection)
 	console.log(`User connected: ${socket.id}`);
 
+	socket.on('join_room', (data) => {
+		socket.join(data);
+		console.log(`User ID: ${socket.id} joined room: ${data}`);
+	});
+
 	socket.on('disconnect', () => {
 		console.log('User disconnected', socket.id);
 	});
