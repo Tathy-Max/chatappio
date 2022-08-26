@@ -16,6 +16,7 @@ function Chat({ socket, username, room }) {
 					new Date(Date.now()).getMinutes(),
 			};
 			await socket.emit('send_message', messageData);
+			setMessageList((list) => [...list, messageData]);
 		}
 	};
 
@@ -32,7 +33,19 @@ function Chat({ socket, username, room }) {
 			</div>
 			<div className="chat-body">
 				{messageList.map((messageContent) => {
-					return <h1>{messageContent.message}</h1>;
+					return (
+						<div className="message">
+							<div>
+								<div className="message-content">
+									<p>{messageContent.message}</p>
+								</div>
+								<div className="message-meta">
+									<p>{messageContent.time}</p>
+									<p>{messageContent.author}</p>
+								</div>
+							</div>
+						</div>
+					);
 				})}
 			</div>
 			<div className="chat-footer">
