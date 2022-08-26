@@ -76,8 +76,10 @@ body {
 }
 
 .chat-window {
-	width: 300px;
-	height: 420px;
+	/* width: 300px;
+	height: 420px; */
+	width: 21rem;
+	max-height: 41rem;
 }
 
 .chat-window p {
@@ -86,10 +88,8 @@ body {
 .chat-window .chat-header {
 	height: 45px;
 	border-radius: 6px;
-	border-radius: 6px;
 	background: #5271ff;
 	position: relative;
-	cursor: pointer;
 }
 .chat-window .chat-header p {
 	display: block;
@@ -104,7 +104,6 @@ body {
 	border: 1px solid #5271ff;
 	border-radius: 6px;
 	background: #fff;
-
 	position: relative;
 }
 .chat-window .chat-body .message-container {
@@ -127,8 +126,8 @@ body {
 	width: auto;
 	height: auto;
 	min-height: 40px;
-	max-width: 120px;
-	background-color: #5271ff;
+	max-width: 210px;
+	background-color: #44b6ba;
 	border-radius: 5px;
 	color: white;
 	display: flex;
@@ -160,7 +159,7 @@ body {
 
 #other .message-content {
 	justify-content: flex-end;
-	background-color: cornflowerblue;
+	background-color: #5271ff;
 }
 
 #other .message-meta {
