@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import chatAppLogo from './assets/images/chatAppLogo.png';
 
 function Chat({ socket, username, room }) {
 	const [currentMessage, setCurrentMessage] = useState('');

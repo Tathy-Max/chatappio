@@ -2,6 +2,8 @@ import './App.css';
 import io from 'socket.io-client';
 import { useState } from 'react';
 import Chat from './Chat';
+import chatAppLogo from './assets/images/chatAppLogo.png';
+import wavefooter from './assets/images/wavefooter.png';
 
 const socket = io.connect('http://localhost:3001');
 
@@ -19,13 +21,13 @@ function App() {
 
 	return (
 		<div className="App">
-			<img src="./assets/images/chatAppLogo.png" alt="chatLogo" />
 			{!showChat ? (
 				<div className="joinChatContainer">
-					<h3>Join a Chat</h3>
+					<img className="logo" src={chatAppLogo} alt="chatLogo" />
+					<h3>Get Started</h3>
 					<input
 						type="text"
-						placeholder="Your name here..."
+						placeholder="Your name..."
 						onChange={(event) => {
 							setUsername(event.target.value);
 						}}
@@ -38,6 +40,7 @@ function App() {
 						}}
 					/>
 					<button onClick={joinRoom}>Join a Room</button>
+					<img className="wave" src={wavefooter} alt="waveLogo" />
 				</div>
 			) : (
 				<Chat socket={socket} username={username} room={room} />
