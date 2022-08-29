@@ -4,8 +4,8 @@ Chat App was my first real time chat project developed using [Socket.IO](https:/
 Inspired by [react-socketio-chat-app](https://github.com/machadop1407/react-socketio-chat-app)
 
 ## Preview
-
 https://user-images.githubusercontent.com/106126657/187289031-49f4cd1f-676d-4012-9229-f73d08f21fcf.mp4
+
 
 ## Available Scripts
 
